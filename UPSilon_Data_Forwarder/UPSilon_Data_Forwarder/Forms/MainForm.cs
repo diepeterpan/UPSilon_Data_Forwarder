@@ -211,7 +211,7 @@ namespace UPSilon_Data_Forwarder
                 //client.DefaultRequestHeaders.Add("Authorization", "Bearer token");
                 try
                 {
-                    using (HttpResponseMessage response = await client.GetAsync(new Uri($"https://api.telegram.org/bot{Properties.Settings.Default.Token}/sendMessage?chat_id=-{Properties.Settings.Default.Chat_ID}&text={VarClass.JsonData}")))
+                    using (HttpResponseMessage response = await client.GetAsync(new Uri($"https://api.telegram.org/bot{Properties.Settings.Default.Token}/sendMessage?chat_id={Properties.Settings.Default.Chat_ID}&text={VarClass.JsonData}")))
                     {
                         using (HttpContent content = response.Content)
                         {
